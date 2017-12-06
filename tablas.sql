@@ -61,3 +61,37 @@ CREATE TABLE Rellena (
 	FOREIGN KEY (idPartida) REFERENCES Partida(id),
 	FOREIGN KEY (nombreAtributo) REFERENCES Atributo(nombre)
 );
+
+CREATE TABLE Usuario (
+	id integer PRIMARY KEY,
+	nombre text NOT NULL,
+	password text NOT NULL
+);
+
+CREATE TABLE comenta (
+	idUsuario integer,
+	idPartida integer,
+	PRIMARY KEY (idUsuario, idPartida),
+	FOREIGN KEY (idUsuario) REFERENCES Usuario(id),
+	FOREIGN KEY (idPartida) REFERENCES Partida(id)
+);
+
+CREATE TABLE Comentario (
+	id integer PRIMARY KEY,
+	comentario text NOT NULL
+);
+
+CREATE TABLE escribe (
+	idComentario integer PRIMARY KEY,
+	idUsuario integer NOT NULL,
+	idPartida integer NOT NULL,
+	FOREIGN KEY (idComentario) REFERENCES Comentario(id),
+	FOREIGN KEY (idUsuario) REFERENCES Usuario(id),
+	FOREIGN KEY (idPartida) REFERENCES Partida(id)
+);
+
+CREATE TABLE tiene_en_cache (
+	idEstadistica integer PRIMARY KEY,
+	idUsuario integer NOT NULL,
+	FOREIGN KEY (idUsuario) REFERENCES Usuario(id)
+);
