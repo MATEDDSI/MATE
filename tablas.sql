@@ -1,6 +1,5 @@
 CREATE TABLE Jugador (
-	id integer PRIMARY KEY,
-	nombre text NOT NULL
+	nombre text PRIMARY KEY
 );
 
 CREATE TABLE Partida (
@@ -55,24 +54,25 @@ CREATE TABLE Tiene (
 
 CREATE TABLE Rellena (
 	idPartida integer,
+	nombreJugador text,
 	nombreAtributo text,
 	valor text,
-	PRIMARY KEY (idPartida, nombreAtributo),
-	FOREIGN KEY (idPartida) REFERENCES Partida(id),
+	PRIMARY KEY (idPartida, nombreJugador, nombreAtributo),
+	FOREIGN KEY (idPartida) REFERENCES juega(idPartida),
+	FOREIGN KEY (nombreJugador) REFERENCES juega(nombreJugador),
 	FOREIGN KEY (nombreAtributo) REFERENCES Atributo(nombre)
 );
 
 CREATE TABLE Usuario (
-	id integer PRIMARY KEY,
-	nombre text NOT NULL,
+	nombre text PRIMARY KEY,
 	password text NOT NULL
 );
 
 CREATE TABLE comenta (
-	idUsuario integer,
+	nombreUsuario text,
 	idPartida integer,
-	PRIMARY KEY (idUsuario, idPartida),
-	FOREIGN KEY (idUsuario) REFERENCES Usuario(id),
+	PRIMARY KEY (nombreUsuario, idPartida),
+	FOREIGN KEY (nombreUsuario) REFERENCES Usuario(nombre),
 	FOREIGN KEY (idPartida) REFERENCES Partida(id)
 );
 
@@ -83,11 +83,11 @@ CREATE TABLE Comentario (
 
 CREATE TABLE escribe (
 	idComentario integer PRIMARY KEY,
-	idUsuario integer NOT NULL,
+	nombreUsuario text NOT NULL,
 	idPartida integer NOT NULL,
 	FOREIGN KEY (idComentario) REFERENCES Comentario(id),
-	FOREIGN KEY (idUsuario) REFERENCES Usuario(id),
-	FOREIGN KEY (idPartida) REFERENCES Partida(id)
+	FOREIGN KEY (nombreUsuario) REFERENCES comenta(nombreUsuario),
+	FOREIGN KEY (idPartida) REFERENCES comenta(idPartida)
 );
 
 CREATE TABLE tiene_en_cache (
