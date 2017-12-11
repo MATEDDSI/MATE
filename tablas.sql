@@ -21,12 +21,12 @@ CREATE TABLE Atributo (
 );
 
 CREATE TABLE Juega(
-	idJugador integer,
+	nombreJugador integer,
 	idPartida integer,
 	puntuacion integer,
 	fecha text,
-	PRIMARY KEY (idJugador, idPartida),
-	FOREIGN KEY (idJugador) REFERENCES Jugador(id),
+	PRIMARY KEY (nombreJugador, idPartida),
+	FOREIGN KEY (nombreJugador) REFERENCES Jugador(nombre),
 	FOREIGN KEY (idPartida) REFERENCES Partida(id)
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE Rellena (
 	idPartida integer,
 	nombreJugador text,
 	nombreAtributo text,
-	valor text,
+	valor text NOT NULL,
 	PRIMARY KEY (idPartida, nombreJugador, nombreAtributo),
 	FOREIGN KEY (idPartida) REFERENCES juega(idPartida),
 	FOREIGN KEY (nombreJugador) REFERENCES juega(nombreJugador),
