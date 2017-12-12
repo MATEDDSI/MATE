@@ -71,23 +71,10 @@ CREATE TABLE Usuario (
 CREATE TABLE comenta (
 	nombreUsuario text,
 	idPartida integer,
-	PRIMARY KEY (nombreUsuario, idPartida),
+	comentario text,
+	PRIMARY KEY (nombreUsuario, idPartida, comentario),
 	FOREIGN KEY (nombreUsuario) REFERENCES Usuario(nombre),
 	FOREIGN KEY (idPartida) REFERENCES Partida(id)
-);
-
-CREATE TABLE Comentario (
-	id integer PRIMARY KEY,
-	comentario text NOT NULL
-);
-
-CREATE TABLE escribe (
-	idComentario integer PRIMARY KEY,
-	nombreUsuario text NOT NULL,
-	idPartida integer NOT NULL,
-	FOREIGN KEY (idComentario) REFERENCES Comentario(id),
-	FOREIGN KEY (nombreUsuario) REFERENCES comenta(nombreUsuario),
-	FOREIGN KEY (idPartida) REFERENCES comenta(idPartida)
 );
 
 CREATE TABLE tiene_en_cache (
