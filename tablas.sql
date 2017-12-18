@@ -79,6 +79,6 @@ CREATE TABLE comenta (
 
 CREATE TABLE tiene_en_cache (
 	idEstadistica integer PRIMARY KEY,
-	idUsuario integer NOT NULL,
-	FOREIGN KEY (idUsuario) REFERENCES Usuario(id)
+	nombreUsuario text NOT NULL,
+	FOREIGN KEY (nombreUsuario) REFERENCES Usuario(nombre)
 );
