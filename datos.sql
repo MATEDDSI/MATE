@@ -1,9 +1,9 @@
-INSERT INTO Juego (nombre) VALUES ('Heartstone'), ('Pokemon');
+INSERT INTO Juego (nombre) VALUES ('Hearthstone'), ('Pokemon'), ('Atletismo');
 
-INSERT INTO Atributo (nombre, tipo) VALUES ('numero de cartas', 'int'), ('primer pokemon', 'string');
+INSERT INTO Atributo (nombre, tipo) VALUES ('numero de cartas', 'int'), ('primero', 'string'), ('prueba', 'string');
 
 INSERT INTO tiene (nombreJuego, nombreAtributo)
-VALUES ('Heartstone', 'numero de cartas'), ('Pokemon', 'primer pokemon');
+VALUES ('Hearthstone', 'numero de cartas'), ('Pokemon', 'primero'), ('Atletismo', 'prueba');
 
 
 INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
@@ -11,32 +11,32 @@ INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
 INSERT INTO Partida (id) VALUES (0), (1), (2), (3), (4);
 
 INSERT INTO Pertenece (idPartida, nombreJuego)
-VALUES (0, 'Pokemon'), (1, 'Heartstone'), (2, 'Pokemon'), (3, 'Heartstone'), (4, 'Pokemon');
+VALUES (0, 'Pokemon'), (1, 'Hearthstone'), (2, 'Pokemon'), (3, 'Atletismo'), (4, 'Pokemon');
 
-INSERT INTO juega (nombreJugador, idPartida, puntuacion)
-VALUES ('Maria', 0, 0), ('Maria', 1, 1), ('Maria', 2, 2), ('Maria', 4, 3);
+INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
+VALUES ('Maria', 0, 0, '01/12/2017'), ('Maria', 1, 1, '03/12/2017'), ('Maria', 2, 2, '05/12/2017'), ('Maria', 4, 3, '10/12/2017');
 
-INSERT INTO juega (nombreJugador, idPartida, puntuacion)
-VALUES ('Lucia', 0, 1), ('Lucia', 3, 0), ('Lucia', 4, 2);
+INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
+VALUES ('Lucia', 0, 1, '01/12/2017'), ('Lucia', 3, 40, '07/12/2017'), ('Lucia', 4, 2, '10/12/2017');
 
-INSERT INTO juega (nombreJugador, idPartida, puntuacion)
-VALUES ('Paco', 1, 0), ('Paco', 2, 2), ('Paco', 4, 1);
+INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
+VALUES ('Paco', 1, 0, '03/12/2017'), ('Paco', 2, 2, '05/12/2017'), ('Paco', 4, 1, '10/12/2017');
 
 
 INSERT INTO rellena (idPartida, nombreJugador, nombreAtributo, valor)
-VALUES (0, 'Maria', 'primer pokemon', 'pikachu'),
+VALUES (0, 'Maria', 'primero', 'pikachu'),
 (1, 'Maria', 'numero de cartas', 20),
-(2, 'Maria', 'primer pokemon', 'charmander'),
-(4, 'Maria', 'primer pokemon', 'charmander');
+(2, 'Maria', 'primero', 'charmander'),
+(4, 'Maria', 'primero', 'charmander');
 
 
 INSERT INTO rellena (idPartida, nombreJugador, nombreAtributo, valor)
-VALUES (0, 'Lucia', 'primer pokemon', 'bulbasaur'),
-(3, 'Lucia', 'numero de cartas', 40),
-(4, 'Lucia', 'primer pokemon', 'pikachu');
+VALUES (0, 'Lucia', 'primero', 'bulbasaur'),
+(3, 'Lucia', 'prueba', '100m'),
+(4, 'Lucia', 'primero', 'pikachu');
 
 
 INSERT INTO rellena (idPartida, nombreJugador, nombreAtributo, valor)
 VALUES (1, 'Paco', 'numero de cartas', 15),
-(2, 'Paco', 'primer pokemon', 'squirtle'),
-(4, 'Paco', 'primer pokemon', 'bulbasaur');
+(2, 'Paco', 'primer', 'squirtle'),
+(4, 'Paco', 'primer', 'bulbasaur');
