@@ -36,7 +36,8 @@ VALUES (0, 'Maria', 'primero', 'pikachu'),
 (4, 'Maria', 'primero', 'charmander'),
 (4, 'Maria', 'Npociones', '4'),
 (4, 'Maria', 'Neters', '2'),
-(4, 'Maria', 'segundo', 'charmeleon');
+(4, 'Maria', 'segundo', 'charmeleon'),
+(5, 'Maria', 'numero de cartas', 30);
 
 
 INSERT INTO Rellena (idPartida, nombreJugador, nombreAtributo, valor)
@@ -46,7 +47,9 @@ VALUES (0, 'Lucia', 'primero', 'bulbasaur'),
 (4, 'Lucia', 'primero', 'pikachu'),
 (4, 'Lucia', 'Npociones', '2'),
 (4, 'Lucia', 'Neters', '9'),
-(4, 'Lucia', 'segundo', 'raichu');
+(4, 'Lucia', 'segundo', 'raichu'),
+(5, 'Lucia', 'numero de cartas', 35),
+(6, 'Lucia', 'numero de cartas', 25);
 
 
 INSERT INTO Rellena (idPartida, nombreJugador, nombreAtributo, valor)
@@ -54,7 +57,8 @@ VALUES (1, 'Paco', 'numero', 15),
 (2, 'Paco', 'primero', 'squirtle'),
 (2, 'Paco', 'Npociones', '2'),
 (4, 'Paco', 'Npociones', '6'),
-(4, 'Paco', 'primero', 'bulbasaur');
+(4, 'Paco', 'primero', 'bulbasaur'),
+(6, 'Paco', 'numero de cartas', 33);
 
 INSERT INTO Usuario (nombre, password)
 VALUES ("admin", "admin");
