@@ -8,19 +8,21 @@ VALUES ('Hearthstone', 'numero'), ('Pokemon', 'primero'), ('Pokemon', 'segundo')
 
 INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
 
-INSERT INTO Partida (id) VALUES (0), (1), (2), (3), (4);
+INSERT INTO Partida (id) VALUES (0), (1), (2), (3), (4), (5), (6);
 
 INSERT INTO Pertenece (idPartida, nombreJuego)
 VALUES (0, 'Pokemon'), (1, 'Hearthstone'), (2, 'Pokemon'), (3, 'Atletismo'), (4, 'Pokemon');
 
 INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
-VALUES ('Maria', 0, 0, '01/12/2017'), ('Maria', 1, 1, '03/12/2017'), ('Maria', 2, 2, '05/12/2017'), ('Maria', 4, 3, '10/12/2017');
+VALUES ('Maria', 0, 0, '01/12/2017'), ('Maria', 1, 1, '03/12/2017'), ('Maria', 2, 2, '05/12/2017'), ('Maria', 4, 3, '10/12/2017'), ('Maria', 5, 3, '13/12/2017');
 
 INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
-VALUES ('Lucia', 0, 1, '01/12/2017'), ('Lucia', 3, 40, '07/12/2017'), ('Lucia', 4, 2, '10/12/2017');
+VALUES ('Lucia', 0, 1, '01/12/2017'), ('Lucia', 3, 40, '07/12/2017'), ('Lucia', 4, 2, '10/12/2017'),
+('Lucia', 5, 6, '13/12/2017'), ('Lucia', 6, 3, '16/12/2017');
 
 INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
-VALUES ('Paco', 1, 0, '03/12/2017'), ('Paco', 2, 2, '05/12/2017'), ('Paco', 4, 1, '10/12/2017');
+VALUES ('Paco', 1, 0, '03/12/2017'), ('Paco', 2, 2, '05/12/2017'), ('Paco', 4, 1, '10/12/2017'),
+('Paco', 6, 4, '16/12/2017');
 
 
 INSERT INTO Rellena (idPartida, nombreJugador, nombreAtributo, valor)
