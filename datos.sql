@@ -3,7 +3,7 @@ INSERT INTO Juego (nombre) VALUES ('Hearthstone'), ('Pokemon'), ('Atletismo');
 INSERT INTO Atributo (nombre, tipo) VALUES ('numero', 'int'), ('primero', 'string'), ('prueba', 'string'), ('segundo','string'), ('Npociones', 'int'), ('Neters', 'int');
 
 INSERT INTO tiene (nombreJuego, nombreAtributo)
-VALUES ('Hearthstone', 'numero'), ('Pokemon', 'primero'), ('Pokemon', 'segundo'),('Pokemon', 'Neters'),('Pokemon', 'Npociones'), ('Atletismo', 'prueba'), (5, 'Hearthstone'), (6, 'Hearthstone');
+VALUES ('Hearthstone', 'numero'), ('Pokemon', 'primero'), ('Pokemon', 'segundo'),('Pokemon', 'Neters'),('Pokemon', 'Npociones'), ('Atletismo', 'prueba');
 
 
 INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
@@ -11,7 +11,7 @@ INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
 INSERT INTO Partida (id) VALUES (0), (1), (2), (3), (4), (5), (6);
 
 INSERT INTO Pertenece (idPartida, nombreJuego)
-VALUES (0, 'Pokemon'), (1, 'Hearthstone'), (2, 'Pokemon'), (3, 'Atletismo'), (4, 'Pokemon');
+VALUES (0, 'Pokemon'), (1, 'Hearthstone'), (2, 'Pokemon'), (3, 'Atletismo'), (4, 'Pokemon'), (5, 'Hearthstone'), (6, 'Hearthstone');
 
 INSERT INTO juega (nombreJugador, idPartida, puntuacion, fecha)
 VALUES ('Maria', 0, 0, '01/12/2017'), ('Maria', 1, 1, '03/12/2017'), ('Maria', 2, 2, '05/12/2017'), ('Maria', 4, 3, '10/12/2017'), ('Maria', 5, 3, '13/12/2017');
