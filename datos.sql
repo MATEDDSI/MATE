@@ -3,7 +3,7 @@ INSERT INTO Juego (nombre) VALUES ('Hearthstone'), ('Pokemon'), ('Atletismo');
 INSERT INTO Atributo (nombre, tipo) VALUES ('numero', 'int'), ('primero', 'string'), ('prueba', 'string'), ('segundo','string'), ('Npociones', 'int'), ('Neters', 'int');
 
 INSERT INTO tiene (nombreJuego, nombreAtributo)
-VALUES ('Hearthstone', 'numero'), ('Pokemon', 'primero'), ('Pokemon', 'segundo'),('Pokemon', 'Neters'),('Pokemon', 'Npociones'), ('Atletismo', 'prueba');
+VALUES ('Hearthstone', 'numero'), ('Pokemon', 'primero'), ('Pokemon', 'segundo'),('Pokemon', 'Neters'),('Pokemon', 'Npociones'), ('Atletismo', 'prueba'), (5, 'Hearthstone'), (6, 'Hearthstone');
 
 
 INSERT INTO Jugador (nombre) VALUES ('Maria'), ('Lucia'), ('Paco');
